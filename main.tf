@@ -21,12 +21,12 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "ubuntu" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-test-bucket"
 
   tags = {
-    Name = var.instance_name
+    Name        = "My bucket"
+    Environment = "Dev"
   }
 }
 
