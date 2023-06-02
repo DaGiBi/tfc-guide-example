@@ -16,3 +16,12 @@ variable "instance_name" {
   default     = "Provisioned by Terraform"
 }
 
+variable "ecVar" {
+  description = "EC2 new name"
+  default     = "Provisioned by Terraform"
+}
+
+variable "t2medium" {
+  description = "Type of EC2 instance to provision"
+  default     = "t2.medium"
+}
