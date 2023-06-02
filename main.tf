@@ -30,12 +30,12 @@ resource "aws_instance" "ubuntu" {
   }
 }
 
-resource "aws_instance" "ubuntu" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type
+resource "aws_s3_bucket" "bucket" {
+  bucket = "test bucket"
 
   tags = {
-    Name = var.instance_name
+    Name        = "bucketttt"
+    Environment = "Dev"
   }
 }
 
