@@ -83,9 +83,9 @@ resource "aws_dynamodb_table" "my-dynamo-tableohhhhhhhh" {
 }
 
 
-resource "aws_db_instance" "sqldb-instance" {
+resource "aws_db_instance" "mydbsql" {
   allocated_storage    = 10
-  db_name              = "mydb"
+  db_name              = "mydbsql"
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t3.micro"
